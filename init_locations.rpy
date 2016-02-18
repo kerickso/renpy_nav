@@ -11,7 +11,14 @@ init 1 python:
     location3 = Location("location3", "Room C")
     location2.add_left(location3)    
 
+    location4 = Location("location4", "Room D")
+    location3.add_top(location4)
 
+    location5 = Location("location5", "Room E")
+    location4.add_bottom(location5)
+    location4.add_top(location5)
+    location4.add_left(location5)
+    location4.add_right(location5)
 
 ###### Step 2: SET UP ALL THE REN'PY TAGS: #####
 label location1:
@@ -46,7 +53,17 @@ label location3:
         location3.screen_loop()
     return
 
- 
+label location4: 
+    scene location4
+    "So you know that you don't have to have the two edges of the locations don't have to match, right?"
+    python:
+        renpy.hide_screen("ui_nav")
+        check_location(location4)
+    python:
+        renpy.show_screen("ui_nav", location4)
+        location4.screen_loop()
+    return
+
 
 
 
