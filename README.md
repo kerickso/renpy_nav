@@ -3,6 +3,8 @@ by kerickso at github
 
 Four files made to help you set up a basic navigation system for Ren'Py. A little experiment I've made to practice using Python but also be prepped for game jam.
 
+This is an example of the implementation of it. IMPORTANT:: To test, create a new Ren'Py project, add these files, and remove or comment out the start label in script.py.
+
 ## Overview
 These files allow you to create a navigation system with buttons at the top, bottom, left, and right of the screen. Allows each system to have both a label name (should be the same as the label of the location - see init_locations.rpy) and a nickname that will display on the links to them.
 
