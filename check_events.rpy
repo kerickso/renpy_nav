@@ -9,13 +9,17 @@ init 2 python:
 
 RoomA00:
     "This is the first time you've been in Room A."
+    python:
+        been_to_a ++;
     return
 
 RoomA:
     "You've been here before. But that door sure wasn't."
     python:
-        
+        location1.del_top()
+        location2.add_bottom(EndGame)
     return
 
 EndGame:
+    "It's the end, you know?"
     return
