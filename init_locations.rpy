@@ -20,6 +20,10 @@ init 1 python:
     location4.add_left(location5)
     location4.add_right(location5)
 
+    location5.add_top(location1)
+
+    EndGame = Location("EndGame", "A Mysterious Door")
+
 ###### Step 2: SET UP ALL THE REN'PY TAGS: #####
 label location1:
     scene location1
@@ -62,6 +66,24 @@ label location4:
     python:
         renpy.show_screen("ui_nav", location4)
         location4.screen_loop()
+    return
+
+label location5: 
+    scene location5
+    "I knew you'd get here - but oh, wait!"
+    python:
+        renpy.hide_screen("ui_nav")
+        check_location(location5)
+    python:
+        renpy.show_screen("ui_nav", location5)
+        location5.screen_loop()
+    return
+
+label EndGame: 
+    scene the_end
+    python:
+        renpy.hide_screen("ui_nav")
+        check_location(location5) 
     return
 
 
