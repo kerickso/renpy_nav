@@ -25,6 +25,7 @@ init 1 python:
     EndGame = Location("EndGame", "A Mysterious Door")
 
 ###### Step 2: SET UP ALL THE REN'PY TAGS: #####
+label start:
 label location1:
     scene location1
     python:
@@ -37,10 +38,10 @@ label location1:
 
 label location2:
     scene location2
-    "Feel free to go back whenever you want to."
     python:
         renpy.hide_screen("ui_nav")
         check_location(location2)
+    "Feel free to go back whenever you want to."
     python:
         renpy.show_screen("ui_nav", location2)
         location2.screen_loop()
@@ -48,10 +49,10 @@ label location2:
 
 label location3:
     scene location3
-    "Or not. Let's keep moving forward."
     python:
         renpy.hide_screen("ui_nav")
         check_location(location3)
+    "Or not. Let's keep moving forward."
     python:
         renpy.show_screen("ui_nav", location3)
         location3.screen_loop()
@@ -59,10 +60,10 @@ label location3:
 
 label location4: 
     scene location4
-    "So you know that you don't have to have the two edges of the locations don't have to match, right?"
     python:
         renpy.hide_screen("ui_nav")
         check_location(location4)
+    "So you know that you don't have to have the two edges of the locations don't have to match, right?"
     python:
         renpy.show_screen("ui_nav", location4)
         location4.screen_loop()
@@ -70,10 +71,10 @@ label location4:
 
 label location5: 
     scene location5
-    "I knew you'd get here - but oh, wait!"
     python:
         renpy.hide_screen("ui_nav")
         check_location(location5)
+    "I knew you'd get here - but oh, wait!"
     python:
         renpy.show_screen("ui_nav", location5)
         location5.screen_loop()
